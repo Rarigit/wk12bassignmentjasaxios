@@ -22,7 +22,7 @@ function gprFailure(error){
     console.log(error);
 }
 
-//Always press the button then the debugger will show you the data you want and where exactly its located
+//Always press the button on the page then the debugger will show you the data you want and where exactly its located
 function graSuccess(response){
     let data = response.data.activity;
     document.body.insertAdjacentHTML(`beforeend`, `<h1>${data}</h1>`);
@@ -34,5 +34,6 @@ function graFailure(error){
     console.log(error);
 }
 
+//Event Listeners
 document.getElementById(`smashButton`).addEventListener(`click`,getRandomActivity);
 document.getElementById(`smashSubmit`).addEventListener(`click`, getPriceRanges);
